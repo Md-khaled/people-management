@@ -36,4 +36,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the [Khaled Mahmud](Ujjal).
+This project is licensed under the [Khaled Mahmud Ujjal](https://example.com/khaled-mahmud).
