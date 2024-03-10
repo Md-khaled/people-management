@@ -13,7 +13,7 @@ This Laravel application is a Person Management System that allows users to filt
 
 ## Installation
 
-1. **Clone the repository:** `git clone <repository_url>`
+1. **Clone the repository:** `git clone <https://github.com/Md-khaled/people-management>`
 2. **Navigate to the project directory:** `cd laravel-person-management-system`
 3. **Install Composer dependencies:** `composer install`
 4. **Copy the `.env.example` file to `.env` and configure your environment variables:** `cp .env.example .env`
