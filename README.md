@@ -9,16 +9,16 @@ This Laravel application is a Person Management System that allows users to filt
 - Cache filtered results in Redis for 60 seconds to improve performance
 - Display results in a paginated table with Bootstrap 5 styling
 - Provide custom pagination with previous, next, and total records count
-- Optimize database schema to ensure queries to PostgreSQL/MySql do not take longer than 250ms
+- Optimize database schema to ensure queries to PostgreSQL do not take longer than 250ms
 
 ## Installation
 
 1. **Clone the repository:** `git clone <https://github.com/Md-khaled/people-management>`
-2. **Navigate to the project directory:** `cd laravel-person-management-system`
-3. **Install Composer dependencies:** `composer install`
-4. **Copy the `.env.example` file to `.env` and configure your environment variables:** `cp .env.example .env`
-5. **Generate a new application key:** `php artisan key:generate`
-6. **Run database migrations to create the necessary tables:** `php artisan migrate`
+2. **Navigate to the project directory:** `cd people-management-system`
+3. **Copy the `.env.example` file to `.env` and configure your environment variables like PostgreSQL or MySql and Redis:** `cp .env.example .env`
+4. **Generate a new application key:** `php artisan key:generate`
+5. **Install Composer dependencies:** `composer install`
+6. **Run database migrations to create the necessary tables:** `php artisan migrate:fresh --seed`
 7. **Serve the application:** `php artisan serve`
 
 The application will be available at `http://localhost:8000`.
@@ -36,4 +36,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the [Khaled Mahmud Ujjal](https://github.com/Md-khaled).
+This project is licensed under the [Khaled Mahmud](https://github.com/Md-khaled).
