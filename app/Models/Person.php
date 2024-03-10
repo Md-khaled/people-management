@@ -12,7 +12,7 @@ class Person extends Model
     const CACHE_RECORD_KEY = 'people_total_count';
 
     protected $fillable = [
-        'email_addess',
+        'email_address',
         'name',
         'birthday',
         'phone',
@@ -20,6 +20,13 @@ class Person extends Model
         'country',
     ];
 
+    /**
+     * Scope a query to filter people by birth year.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
     public function scopeFilterByBirthYear($query, $request)
     {
         if ($request->filled('birth_year')) {
@@ -29,6 +36,13 @@ class Person extends Model
         return $query;
     }
 
+    /**
+     * Scope a query to filter people by birth month.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
     public function scopeFilterByBirthMonth($query, $request)
     {
         if ($request->filled('birth_month')) {
@@ -38,7 +52,13 @@ class Person extends Model
         return $query;
     }
 
-    public function scopeTotalRecordCount($query)
+    /**
+     * Scope a query to get the total record count.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return int
+     */
+    public function scopeTotalRecordCount($query): int
     {
         return $query->count();
     }

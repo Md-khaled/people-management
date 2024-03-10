@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($people as $person)
+        @forelse ($people as $person)
         <tr>
             <td>{{ $person->id }}</td>
             <td>{{ $person->email_address ?? '' }}</td>
@@ -30,7 +30,9 @@
             <td>{{ $person->ip ?? '' }}</td>
             <td>{{ $person->country ?? '' }}</td>
         </tr>
-        @endforeach
+        @empty
+        <tr><td colspan="7"><h2 class="text-center">Record Not Exist</h2></td></tr>
+        @endforelse
     </tbody>
 </table>
 
