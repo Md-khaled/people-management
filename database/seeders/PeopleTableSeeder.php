@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Log;
 
 class PeopleTableSeeder extends Seeder
 {
-    const CSV_PATH = 'app/test-data.csv';
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
+        $csvPath = env('CSV_PATH', 'app/test-data.csv');
         try {
-            $csvData = File::get(storage_path(self::CSV_PATH));
+            $csvData = File::get(storage_path($csvPath));
             $rows = array_map('str_getcsv', explode("\n", $csvData));
             
             $header = array_shift($rows);
