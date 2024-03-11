@@ -15,9 +15,9 @@ This Laravel application is a Person Management System that allows users to filt
 
 1. **Clone the repository:** `git clone <https://github.com/Md-khaled/people-management>`
 2. **Navigate to the project directory:** `cd people-management-system`
-3. **Copy the `.env.example` file to `.env` and configure your environment variables like PostgreSQL or MySql and Redis:** `cp .env.example .env`
-4. **Generate a new application key:** `php artisan key:generate`
-5. **Install Composer dependencies:** `composer install`
+3. **Install Composer dependencies:** `composer install`
+4. **Copy the `.env.example` file to `.env` and configure your environment variables like PostgreSQL or MySql and Redis:** `cp .env.example .env`
+5. **Generate a new application key:** `php artisan key:generate`
 6. **Run database migrations to create the necessary tables:** `php artisan migrate:fresh --seed`
     - Note: Please ensure that the CSV file is located inside the storage/app folder or add the CSV path to the CSV_PATH variable in the .env file. The file must be stored inside the storage folder; otherwise, the data will not be seeded.
 7. **Serve the application:** `php artisan serve`
