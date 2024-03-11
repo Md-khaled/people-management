@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Person;
+use App\Observers\PersonObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
