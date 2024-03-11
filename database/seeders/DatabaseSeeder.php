@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\PeopleTableSeeder;
-
+use App\Observers\PersonObserver;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PeopleTableSeeder::class,
         ]);
+        PersonObserver::updateTotalCount();
     }
 }
