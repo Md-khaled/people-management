@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Person;
+use App\Observers\PersonObserver;
 use App\Http\Requests\FilterPeopleRequest;
 use Illuminate\Support\Facades\Cache;
 
@@ -49,8 +50,16 @@ class PersonService
             ->paginate(self::PER_PAGE);
 
         return [
-            'total_records' => Cache::get(Person::CACHE_RECORD_KEY),
+            'total_records' => $this->getTotalRecord(),
             'people' => $result,
         ];
+    }
+    
+    private function getTotalRecord() {
+        if (!Cache::has(Person::CACHE_RECORD_KEY))
+        {
+            PersonObserver::updateTotalCount();
+        }
+        return Cache::get(Person::CACHE_RECORD_KEY);
     }
 }
