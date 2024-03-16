@@ -1,6 +1,9 @@
 # Person Management System
 
 This Laravel application is a Person Management System that allows users to filter a dataset based on a person's birth year, birth month, or both. The application provides a user-friendly interface for viewing paginated results and includes features such as caching to improve performance.
+# Technologies use
+1. php "^8.1"
+2. laravel "^10.10"
 
 ## Features
 
